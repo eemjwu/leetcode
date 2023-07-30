@@ -36,3 +36,11 @@ cc_binary(
         ":tree",
     ],
 )
+
+cc_binary(
+    name = "preview",
+    srcs = ["preview.cc"],
+    deps = [
+
+    ],
+)
