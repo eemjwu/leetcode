@@ -14,10 +14,25 @@ cc_library(
     ],
 )
 
+
+cc_library(
+    name = "sort",
+    hdrs = ["sort.h"],
+    srcs = ["sort.cc"],
+)
+
+cc_library(
+    name = "tree",
+    hdrs = ["tree.h"],
+    srcs = ["tree.cc"],
+)
+
 cc_binary(
     name = "main",
     srcs = ["main.cc"],
     deps = [
         ":leetcode",
+        ":sort",
+        ":tree",
     ],
 )
