@@ -95,6 +95,7 @@ void realPostorderTraversalCyc(TreeNode* root, vector<int>& res) {
         res.push_back(cur->val);
         pre = cur;  // 记录当前访问的节点
         // point: 设置当前访问的为空，后序循环将处理处理栈中元素
+        // 当前的根已经处理了，说明当前节点的 左 右 根 都被处理了，下次处理栈中之前push的上层元素
         cur = nullptr;
       } else {
         cur = cur->right;  // 当前节点的右子树还没处理，先处理右子树
